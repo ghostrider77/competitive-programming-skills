@@ -4,7 +4,6 @@ from math import ceil, log2
 
 
 ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
-ALPHABET = 'abc'
 SIZE = len(ALPHABET)
 
 
