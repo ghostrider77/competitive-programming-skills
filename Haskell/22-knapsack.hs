@@ -1,6 +1,5 @@
 import Control.Monad (replicateM)
 import Data.Array (Array, listArray, range, (!))
-import Data.List (sort)
 
 data Item =  Item Int Int
 
@@ -26,7 +25,6 @@ findItemIndices knapsack items n capacity = go [] capacity n
                     in if knapsack ! (currentCapacity, k) /= previous
                         then go (k : indices) (currentCapacity - weight) (k - 1)
                         else go indices currentCapacity (k - 1)
-            | otherwise = sort indices
 
 
 solveKnapsackProblem :: [Item] -> Int -> Int -> [Int]
